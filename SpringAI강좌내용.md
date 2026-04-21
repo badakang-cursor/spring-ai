@@ -238,4 +238,58 @@ URL : https://www.youtube.com/watch?v=QyRKXYd4xC8&list=PL_GeFwqaAwWFBN0G6Ml3cAtH
     }
     ```
 
-### 실습환경 설정
+# 5-2강 Spring AI 실무 프로젝트 LLM 챗봇 2탄 with JPA React Frontend
+URL : https://www.youtube.com/watch?v=RRMztAkZfB8&list=PL_GeFwqaAwWGYihI94OReWQNzX8UoSAep&index=14
+
+1. 🖥 백엔드 서버 실행 및 DB 데이터 확인 [00:12]  
+2. 💻 React 프론트엔드 프로젝트 생성 및 의존성 설치 [02:43]  
+3. 🎨 Bootstrap 연동 및 기본 CSS 설정 [06:27]  
+4. 🛠 챗봇 UI 컴포넌트 구성 및 구조 설계 [08:06]  
+5. 🔄 React 상태 관리(useState, useEffect 등) 및 이벤트 처리 [12:16]  
+6. 🌐 백엔드 API와 데이터 연동(fetch, async/await) 및 오류 처리 [18:24]  
+7. ⚙ CORS 문제 해결을 위한 Spring WebConfig 설정 [31:55]  
+8. 📝 최종 작동 확인 및 향후 프로젝트 소개 [34:41]  
+
+### vite UI 환경구성
+- PS C:\dev\projects\java\fullstackcamp\spring-ai> npm create vite@latest springai-chatbot-ui -- template react
+  - react선택
+  - javascript선택
+- cd springai-chatbot-ui
+- vite 외부 라이브러리 설치 : npm i
+- bootstrap 설치 : npm i bootstrap
+- react-router-dom 설치 : npm i react-router-dom
+- 실행 : npm run dev
+
+# 6-1강 Spring AI LLM 실무 프로젝트 RAG를 통한 챗봇 구현 / 이론 및 기본 Chatbot 리뷰
+URL : https://www.youtube.com/watch?v=RRMztAkZfB8&list=PL_GeFwqaAwWGYihI94OReWQNzX8UoSAep&index=14
+
+✨ 목차  
+📌[0:10] 프로젝트 소개 및 목표  
+📚[1:18] RAG와 인베딩 개념 설명  
+🔍[2:06] 정보 검색과 언어 생성 과정  
+🧮[2:29] 인베딩과 코사인 유사도 이해하기  
+📄[4:19] PDF 도큐먼트 리더와 텍스트 처리  
+💻[6:06] 기본 챗봇 API 구현 실습  
+🌐[14:02] CORS 설정 및 웹 서버 구성  
+🖥[17:14] 프론트엔드(React) 프로젝트 세팅  
+📝[27:22] 프론트엔드 간단 UI 및 기능 구현  
+✅[35:10] 기본 챗봇 테스트 및 결과 확인  
+
+### Spring Al ChatModels 실무 시나리오 (예제: 고객 지원 챗봇)
+
+Spring AI의 ChatModels 인터페이스를 활용하여 실제 업무에서 사용 가능한 고객 지원 챗봇을 만드는 방법을 학습한다
+이 챗봇은 고객의 질문의 특정 주제에 맞는 질문에 명확한 답을 제시하는 챗봇을 구현한다
+
+확장: RAG(검색 증강 생성) 및 파일 첨부 기능 추가
+
+기존 고객 지원 챗봇 시나리오에 RAG(Retrieval-Augmented Generation) 기술을 도입하여, 사용자가 첨부한 파일(예: 상품
+설명서, 기술 설명서, 규정 등 PDF)의 내용을 기반으로 답변하는 고급 기능을 추가합니다.
+
+요구사항: 이전의 챗봇 시스템에서는 불필요한 정보를 Model에서 생성을 하였지만, 보유하고 있는 첨부파일(PDF)를 통해
+RAG 기술을 적용하여 명확한 답을 PDF에서 답변 할 수 있도록 한다
+
+추가 기능:
+1. 파일 첨부: 사용자가 채팅창에 상품 설명서 PDF 파일을 첨부할 수 있습니다.
+2. RAG 기반 답변: 챗봇은 사용자가 첨부한 파일의 내용을 실시간으로 분석하고, 그 내용을 근거로 사용자의 질문에 답변
+합니다. 이를 통해 미리 학습되지 않은 최신 정보나 상세 정보에 대해서도 정확한 응대가 가능해집니다.
+

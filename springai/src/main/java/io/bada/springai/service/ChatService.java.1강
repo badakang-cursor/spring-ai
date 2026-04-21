@@ -1,0 +1,34 @@
+package io.bada.springai.service;
+
+import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.ai.chat.model.ChatModel;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+
+@Service
+public class ChatService {
+    @Autowired
+    @Qualifier("ollamaChatModel")
+    //@Qualifier("openAiChatModel")
+    private ChatModel chatModel;
+    public void run(){
+        //ChatClient 객체생성
+        ChatClient chatClient = ChatClient.builder(chatModel).build();
+        
+        String response = chatClient.prompt("스티브 잡스의 명언을 세 개 알려줘")
+                                    .call()
+                                    .content();
+
+        //  ChatResponse response = chatModel.call(
+        //     new Prompt(
+        //         "스티브 잡스의 명언을 세 개 알려줘",
+        //         OllamaChatOptions.builder()
+        //             .model(OllamaModel.LLAMA3_1)
+        //             .temperature(0.4)
+        //             .build()
+        //     ));                                   
+
+        System.out.println("결과 : \n" + response);
+    }
+}

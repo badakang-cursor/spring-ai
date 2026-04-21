@@ -1,0 +1,44 @@
+package io.bada.springai.service;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.ai.chat.messages.Message;
+import org.springframework.ai.chat.messages.SystemMessage;
+import org.springframework.ai.chat.messages.UserMessage;
+import org.springframework.ai.chat.model.ChatResponse;
+import org.springframework.ai.chat.prompt.ChatOptions;
+import org.springframework.ai.chat.prompt.Prompt;
+import org.springframework.ai.openai.OpenAiChatModel;
+import org.springframework.ai.openai.api.OpenAiApi;
+
+public class OpenAiChatService {
+
+    private final OpenAiApi aiApi;
+    public OpenAiChatService(OpenAiApi aiApi){
+        this.aiApi = aiApi;
+    }
+    
+    public ChatResponse getResponse(String userInput, double temperature){
+        // 요청 Prompt
+        List<Message> messages = Arrays.asList(
+            new SystemMessage("당신은 AI 분야 전문가 입니다."),
+            new UserMessage(userInput)
+        );
+
+        // Chat Options
+        ChatOptions options =  ChatOptions.builder()
+                                        .model("llama3.1:8b")
+                                        .temperature(0.8)
+                                        .build();
+
+        // Prompt를 만들고 Motel에 요청
+        Prompt prompt = new Prompt(messages, options);
+        OpenAiChatModel chatModel = OpenAiChatModel.builder()
+                                            .openAiApi(aiApi)
+                                            .build();
+
+        return chatModel.call(prompt);
+
+    }
+}

@@ -2,7 +2,6 @@ package io.bada.springai_chatbot_rag.service;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.ai.document.Document;
@@ -15,8 +14,6 @@ import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-
-import com.knuddels.jtokkit.api.EncodingType;
 
 import lombok.RequiredArgsConstructor;
 

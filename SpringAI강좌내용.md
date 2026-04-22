@@ -373,23 +373,44 @@ URL : https://www.youtube.com/watch?v=L9vvU1UH0-Q&list=PL_GeFwqaAwWGYihI94OReWQN
 프로젝트 : springai-chatbot-rag-ui
 
 
+# 7-1강 Spring AI LLM 프로젝트 4탄(실시간 호텔 고객지원 챗봇) - RAG, WebFlux - 백엔드
+URL : https://www.youtube.com/watch?v=1Zvu0oNYIog&list=PL_GeFwqaAwWGYihI94OReWQNzX8UoSAep&index=8
+프로젝트 : springai-chatbot-qna
 
-## 얼굴인식 기술에 대한 정보
+📚 목차
+1. [0:11] 프로젝트 소개 및 목표  
+2. [2:03] 개발 환경 및 준비물  
+3. [3:46] PGVector 벡터 DB 설정  
+4. [8:34] 서비스 클래스 구현 (텍스트 인베딩 및 저장)  
+5. [17:45] 컨트롤러 개발 (파일 업로드 API)  
+6. [21:30] 샘플 질문 텍스트 및 포스트맨 테스트  
+7. [26:36] 서버 실행 및 DB 확인  
+8. [26:56] 챗봇 요청 처리 컨트롤러  
+9. [29:25] WebFlux와 스트림 반환 이해  
+10. [33:09] 챗봇 모델과 유사도 검색 구현  
+11. [36:47] 사용자 질문에 대한 응답 템플릿 작성  
+12. [41:09] 포스트맨으로 질문 테스트 및 응답 확인  
+13. [42:49] 프론트엔드 실시간 대화형 화면 구현 예정  
 
-**얼굴인식 기술의 문제점:**
 
-* **정부 기관의 무분별한 사용**: 얼굴인식 기술이 정부 기관에서 빠르게 도입되고, 이를 관리할 지침과 감독 부재로 민권 문제를 초래할 위험 존재.
-* **편향 및 개인정보 침해**: 얼굴인식 기술의 편향으로 인한 차별적 영향과 개인 정보 침해 가능성.
-* **법률 부족**: 명시적인 법률 제정 없이 얼굴인식 기술 사용에 대한 법적 지침과 감독 부재.
+# 7-2강 Spring AI LLM 프로젝트 4탄(실시간 호텔 고객지원 챗봇)- RAG, WebFlux -프론트엔드
+URL : https://www.youtube.com/watch?v=8lFhLoqFQB8&list=PL_GeFwqaAwWGYihI94OReWQNzX8UoSAep&index=7
+프로젝트 : springai-chatbot-qna-ui
 
-**민권위원회의 권고사항:**
+목차
+1. 🛠 프로젝트 생성과 초기 세팅 [0:10]
+2. 🎨 CSS 작업 및 컴포넌트 생성 [2:11]
+3. 📝 챗봇 메시지 처리 로직 작성 [4:51]
+4. 🚀 메시지 전송 및 스트리밍 응답 처리 [7:08]
+5. 🖥 화면 구성과 입력 폼 구현 [13:13]
+6. 🔍 디버깅과 실행 테스트 [16:34]
+7. 🎉 마무리 및 요약 [19:05]
 
-* **NIST 운영 테스트 프로토콜 개발**: 정부 기관의 얼굴인식 기술 시스템 도입 시 효과와 공평성, 정확성 평가에 사용할 수 있는 운영 테스트 프로토콜의 개발 필요.
-* **최고AI책임자의 실제 사용 상황 평가 및 불평등 완화**: 연방정부 기관의 얼굴인식 기술을 실제 사용 상황에서 평가하고 차별이나 편견으로 인한 불평등 완화를 위한 노력 필요.
-* **얼굴인식 기술 제공업체의 교육과 지원 강화**: 다양한 인구통계 집단에 대한 높은 정확도를 보장하기 위해 얼굴인식 기술 제공 업체는 지속적인 교육과 지원, 업데이트를 제공해야 함.
-
-
-**참고:**
-
-* U.S. Commission on Civil Rights 보고서 발간 (2024년 9월 19일)
-* FBI의 얼굴인식 기술 사용 예시
+### UI 환경구성
+- PS C:\dev\projects\java\fullstackcamp\spring-ai> npm create vite@latest springai-chatbot-qna-ui -- --template react
+  - react선택
+  - javascript선택
+- cd springai-chatbot-qna-ui
+- vite 외부 라이브러리 설치 : npm i
+??? react-router-dom 설치 : npm i react-router-dom
+- 실행 : npm run dev
